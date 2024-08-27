@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buz Devri 3</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+        * {
+            margin: 0;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: rgb(10, 10, 10);
+            background-size: cover;
+            height: 100vh;
+            font-family: "Electrolize", sans-serif;
+            text-align: center;
+            color: white;
+        }
+        .navbar {
+            background-color: black;
+            height: 60px;
+            color: white;
+            position: sticky;
+            top: 0%;
+        }
+
+        .navbar-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            padding: 0 50px;
+        }
+
+        .logo {
+            color: rgb(255, 70, 70);
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .menu-list {
+            display: flex;
+            list-style: none;
+            column-gap: 30px;
+        }
+
+        .menu-list-item {
+            cursor: pointer;
+        }
+
+        .menu-list-item.active {
+            font-weight: bold;
+        }
+
+        .menu-list-item a {
+            color: white;
+        }
+
+        .menu-list-item:hover {
+            font-weight: bold;
+        }
+
+        .toggle {
+            width: 40px;
+            background-color: white;
+            position: relative;
+            height: 20px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .toggle-ball {
+            width: 18px;
+            height: 18px;
+            background-color: black;
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+            right: 1px;
+        }
+
+        .toggle-icon {
+            color: goldenrod;
+        }
+
+        .sidebar {
+            background-color: black;
+            color: white;
+            height: 100%;
+            width: 50px;
+        }
+
+        .center .buttons {
+            margin: 750px 500px;
+        }
+
+        .buttons button {
+            height: 50px;
+            width: 150px;
+            font-size: 23px;
+            font-weight: bold;
+            color: black;
+            background: rgba(255, 255, 255, 0.867);
+            border: 3px solid black;
+            cursor: pointer;
+            border-radius: 25px;
+        }
+
+        .buttons button:hover {
+            background: #838282;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .film-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .film {
+            background-color: #333;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .film img {
+            width: 100%;
+            display: block;
+        }
+
+        .film-title {
+            color: white;
+            padding: 10px;
+            font-size: 1.2em;
+            display: block;
+            text-decoration: none;
+        }
+
+        .film-title:hover {
+            font-weight: bold;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 60px);
+        }
+
+        .video-wrapper {
+            width: 80%;
+            max-width: 800px;
+            aspect-ratio: 16 / 9;
+        }
+
+        .video-wrapper iframe {
+            width: 100%;
+            height: 100%;
+        }
+        @media (max-width: 768px) {
+            .navbar{
+            background-color: black;
+            height: 60px;
+            color: white;
+            position: sticky;
+            top: 0%;
+        }
+            .navbar-wrapper{
+            display: flex;
+            text-decoration: none;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            padding: 0 10px;
+            color: white;
+        }
+        .logo{
+            color: rgb(255, 70, 70);
+            font-size: 15px;
+            font-family: "Electrolize", sans-serif;
+            font-weight: bold;
+        }
+        .menu-list{
+            display: flex;
+            list-style: none;
+            text-decoration: none;
+            column-gap: 5px;
+            color: white;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-wrapper">
+            <div class="logo-wrapper">
+                <a class="logo" href="index.html">NETCLİCK</a>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item active">
+                        <a href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="menu-list-item">
+                        <a href="filmler.html">Filmler</a>
+                    </li>
+                    <li class="menu-list-item">
+                        <a href="diziler.html">Diziler</a>
+                    </li>
+                    <li class="menu-list-item">
+                        <a href="listem.html">Listem</a>
+                    </li>
+                    <li class="menu-list-item">
+                        <a href="hakkında.html">Hakkında</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="toggle">
+                <i class="bi bi-moon-fill toggle-icon"></i>
+                <i class="bi bi-brightness-high-fill toggle-icon"></i>
+                <div class="toggle-ball"></div>
+            </div>
+        </div>
+    </div>
+    <iframe src="https://vidrame.pro/vr/400d0f83" width="100%" height="360" frameborder="0" scrolling="no" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+</body>
+</html>
