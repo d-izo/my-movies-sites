@@ -110,6 +110,7 @@
 
         .center .buttons{
             margin:750px 500px;
+
         }
         .buttons button{
             height: 50px;
@@ -124,6 +125,38 @@
         }
         .buttons button:hover{
             background: #838282;
+        }
+        @media (max-width: 768px) {
+            .navbar{
+            background-color: black;
+            height: 60px;
+            color: white;
+            position: sticky;
+            top: 0%;
+        }
+            .navbar-wrapper{
+            display: flex;
+            text-decoration: none;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            padding: 0 10px;
+            color: white;
+        }
+        .logo{
+            color: rgb(255, 70, 70);
+            font-size: 15px;
+            font-family: "Electrolize", sans-serif;
+            font-weight: bold;
+        }
+        .menu-list{
+            display: flex;
+            list-style: none;
+            text-decoration: none;
+            column-gap: 5px;
+            color: white;
+        }
+
         }
     </style>
     
