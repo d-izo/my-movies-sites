@@ -20,12 +20,32 @@
             text-align: center;
             color: white;
         }
+        /* Dark mode */
+        body.dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+
+        /* Light mode */
+        body.light-mode {
+            background-color: white;
+            color: black;
+        }
+
+        /* Navbar Styles */
         .navbar {
-            background-color: black;
+            background-color: #000000; /* Karanlık modda koyu renk */
             height: 60px;
             color: white;
             position: sticky;
-            top: 0%;
+            top: 0;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        /* Light mode navbar renkleri */
+        body.light-mode .navbar {
+            background-color: #ffffff; /* Beyaz modda açık renk */
+            color: black;
         }
 
         .navbar-wrapper {
@@ -185,10 +205,10 @@
             </div>
             <div class="menu-container">
                 <ul class="menu-list">
-                    <li class="menu-list-item active">
+                    <li class="menu-list-item">
                         <a href="index.html">Ana Sayfa</a>
                     </li>
-                    <li class="menu-list-item">
+                    <li class="menu-list-item active">
                         <a href="filmler.html">Filmler</a>
                     </li>
                     <li class="menu-list-item">
@@ -317,9 +337,27 @@
                 <a class="film-title" href="film21.html">Kara Şövalye</a>
                 <div class="add-to-list" onclick="addToList('Kara Şövalye', '1karaşövalye.png')">Listeye Ekle</div>
             </div>
-
-
-
+            <div class="film"></div>
+                <img src="1kağıthayat.jpg" alt="Kağıttan Hayatlar">
+                <a class="film-title" href="film22.html">Kağıttan Hayatlar</a>
+                <div class="add-to-list" onclick="addToList('Kağıttan Hayatlar', '1kağıthayat.jpg')">Listeye Ekle</div>
+            </div>
+            <div class="film"></div>
+                <img src="1kefaret.webp" alt="Kefaret">
+                <a class="film-title" href="film24.html">Kefaret</a>
+                <div class="add-to-list" onclick="addToList('Kefaret', '1kefaret.webp')">Listeye Ekle</div>
+            </div>
+            <div class="film"></div>
+                <img src="1aşkvegurur.jpeg" alt="Aşk ve Gurur">
+                <a class="film-title" href="film23.html">Aşk ve Gurur</a>
+                <div class="add-to-list" onclick="addToList('Aşk ve Gurur', '1aşkvegurur.jpeg')">Listeye Ekle</div>
+            </div>
+            <div class="film"></div>
+                <img src="1birgün.webp" alt="Bir Gün">
+                <a class="film-title" href="film25.html">Bir Gün</a>
+                <div class="add-to-list" onclick="addToList('Bir Gün', '1birgün.webp')">Listeye Ekle</div>
+            </div>
+            
             <!-- Diğer filmleri de aynı şekilde ekleyin -->
         </div>
     </div>
@@ -330,6 +368,19 @@
             filmList.push({ title: filmTitle, image: filmImage });
             localStorage.setItem('filmList', JSON.stringify(filmList));
             alert(`${filmTitle} listenize eklendi!`);
+        }
+            // Theme toggling logic
+            function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('light-mode');
+            body.classList.toggle('dark-mode');
+
+            const ball = document.querySelector('.toggle-ball');
+            if (body.classList.contains('light-mode')) {
+                ball.style.transform = 'translateX(-20px)';
+            } else {
+                ball.style.transform = 'translateX(0)';
+            }
         }
     </script>
 </body>
